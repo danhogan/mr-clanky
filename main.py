@@ -1,6 +1,10 @@
 import discord
+import json
 
-TOKEN = ''
+with open('config.json') as config_file:
+        config = json.load(config_file)
+
+TOKEN = config['discord_token']
 
 times = [
     "12:00am-12:30pm",
